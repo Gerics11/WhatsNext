@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.whatsnext.EditActivity">
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="title"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:nextFocusDown="@id/et_date_year"/>
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="description"
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:nextFocusDown="@id/iv_priority"/>
+
+    <EditText
+        android:id="@+id/et_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="comments"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_images" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_title">
+
+        <EditText
+            android:id="@+id/et_date_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="yyyy"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:nextFocusDown="@id/et_date_month" />
+
+        <EditText
+            android:id="@+id/et_date_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="mm"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:nextFocusDown="@id/et_date_day" />
+
+        <EditText
+            android:id="@+id/et_date_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="dd"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:nextFocusDown="@id/et_date_hour" />
+
+        <EditText
+            android:id="@+id/et_date_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="hh"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:nextFocusDown="@id/et_date_minute" />
+
+        <EditText
+            android:id="@+id/et_date_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="mm"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_description">
+
+        <ImageView
+            android:id="@+id/iv_priority"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/ic_priority_normal"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <ImageView
+            android:id="@+id/iv_notify"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/ic_notify_normal"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <ImageView
+            android:id="@+id/iv_recurring"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/ic_repeat_off"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/ic_phone"
+            tools:layout_editor_absoluteX="193dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <ImageView
+            android:id="@+id/iv_email"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/ic_email"
+            tools:layout_editor_absoluteX="252dp"
+            tools:layout_editor_absoluteY="369dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:onClick="saveInput"
+        android:text="SAVE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

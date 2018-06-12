@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">WhatsNext</string>
+
+    <string name="priority_high">High</string>
+    <string name="priority_normal">Normal</string>
+    <string name="priority_low">Low</string>
+
+    <string name="notification_alarm">Alarm</string>
+    <string name="notification_notification">Notification</string>
+    <string name="notification_none">None</string>
+
+    <string name="recurring_none">None</string>
+    <string name="recurring_yearly">Yearly</string>
+    <string name="recurring_monthly">Monthly</string>
+    <string name="recurring_weekly">Weekly</string>
+    <string name="recurring_daily">Daily</string>
+
+    <string-array name="edit_priority_spinner">
+        <item>@string/priority_high</item>
+        <item>@string/priority_normal</item>
+        <item>@string/priority_low</item>
+    </string-array>
+
+    <string-array name="edit_notification_spinner">
+        <item>@string/notification_alarm</item>
+        <item>@string/notification_notification</item>
+        <item>@string/notification_none</item>
+    </string-array>
+
+    <string-array name="edit_recurring_spinner">
+        <item>@string/recurring_none</item>
+        <item>@string/recurring_yearly</item>
+        <item>@string/recurring_monthly</item>
+        <item>@string/recurring_weekly</item>
+        <item>@string/recurring_daily</item>
+    </string-array>
+</resources>
